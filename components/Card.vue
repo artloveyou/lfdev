@@ -1,0 +1,94 @@
+<template>
+  <v-col
+    cols="12"
+    xs="12"
+    sm="12"
+    md="6"
+    lg="4"
+  >
+  <v-card>
+
+    <v-container class="pa-0 ma-0">
+
+      <v-row class="pa-0 ma-0">
+        <v-col class="pa-0 ma-0">
+          <CardFavorite :favorite="favorite" />
+          <CardFlags :category="category" :first="first" :second="second" />
+          <CardQuoteChanging :quote="quote" :changing="changing"/>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container class="pa-0 ma-0">
+      <v-row class="pa-0 ma-0">
+        <v-col class="pa-0 ma-0 activate-settings">
+          <LineChart :labels="labels" :data="data" />
+          <div class="line-chart-settings-bottom"></div>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-divider></v-divider>
+
+    <v-container class="pa-0 ma-0">
+      <v-row class="pa-0 ma-0">
+        <v-col class="pa-0 ma-0 activate-settings">
+          <CardMarketVolatilitySpread :market="market" :direction="direction" :volatility="volatility" :spread="spread"/>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-divider></v-divider>
+
+    <v-container class="pa-0 ma-0">
+      <v-row class="pa-0 ma-0">
+        <v-col class="pa-0 ma-0 activate-settings">
+          <CardSellBuy :sell="sell" :buy="buy" :volume="volume"/>
+        </v-col>
+      </v-row>
+    </v-container>
+
+  </v-card>
+  </v-col>
+</template>
+
+<script>
+  import CardFavorite from '~/components/CardFavorite.vue'
+  import CardFlags from '~/components/CardFlags.vue'
+  import CardQuoteChanging from '~/components/CardQuoteChanging'
+  import LineChart from '~/components/LineChart.vue'
+  import CardMarketVolatilitySpread from "~/components/CardMarketVolatilitySpread"
+  import CardSellBuy from "~/components/CardSellBuy"
+
+  export default {
+    props: ['card'],
+    components: {
+      CardFavorite, CardFlags, CardQuoteChanging, LineChart,
+      CardMarketVolatilitySpread, CardSellBuy
+    },
+    data() {
+      return {
+        favorite: this.card.favorite,
+        category: this.card.category,
+        first: this.card.first,
+        second: this.card.second,
+        quote: this.card.quote,
+        changing: this.card.changing,
+        labels: this.card.labels,
+        data: this.card.data,
+        market: this.card.market,
+        direction: this.card.direction,
+        volatility: this.card.volatility,
+        spread: this.card.spread,
+        sell: this.card.sell,
+        buy: this.card.buy,
+        volume: this.card.volume
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
+

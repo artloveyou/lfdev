@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h1, h2, h3, .flags-name {
+  color: #3b4b68;
+}
+
+.selects {
+  padding: 12px 0 0 0;
+}
+
+.icon {
+  height: 33px;
+  fill: #8e9aac;
+}
+
+.icon:hover {
+  cursor: pointer;
+  fill: #474c5a;
+}
+
+.star-favorite svg {
+  margin: 0 0 -10px 0;
+  height: 30px;
+  fill: #F2B16B
+}
+
+.star-empty svg {
+  margin: 0 0 -10px 0;
+  height: 25px;
+  fill: #8e9aac;
+}
+
+.flags, .flag, .flag-first, .flag-second {
+  padding: 0;
+  margin: 0;
+}
+
+.flag-first, .flag-second, .flags-name {
+  position: absolute;
+}
+
+.flags {
+  margin: 0 0 0 22px;
+  position: relative;
+  height: 53px;
+}
+
+.flag {
+  height: 39px;
+}
+
+.flag-first {
+  top: -4px;
+}
+
+.flag-second {
+  top: 9px;
+  left: 5px;
+}
+
+.flags-name {
+  top: 14px;
+  left: 60px;
+  font-weight: 600;
+}
+
+.card-text {
+  line-height: 1;
+  padding: 20px 0 0 20px;
+}
+
+.card-description {
+  text-transform: uppercase;
+  height: 20px;
+  color: #8e9aac;
+  font-size: 0.6em;
+  padding: 0 0 35px 20px;
+}
+
+.card-green {
+  color: #47BF6F;
+}
+
+.card-red {
+  color: #ff4b5f;
+}
+
+.card-btn-green {
+  color: #ffffff;
+  background-color: #47BF6F;
+}
+
+.card-btn-red {
+  color: #ffffff;
+  background-color: #ff4b5f;
+}
+
+.card-section {
+  background: #EAECED
+}
