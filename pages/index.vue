@@ -1,13 +1,8 @@
-<template>
-  <h1>Index Page</h1>
-</template>
-
+<template></template>
 <script>
     export default {
-        name: "index"
+      created: function() {
+        this.$router.replace({ path: '/trade' })
+      }
     }
 </script>
-
-<style scoped>
-
-</style>

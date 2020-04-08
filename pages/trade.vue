@@ -59,6 +59,9 @@
   import iconList from '~/assets/icons/iconList.vue'
 
   export default {
+    created: function() {
+      this.$router.replace({ path: '/trade/currencies' })
+    },
     components: {
       Header, Select, CustomizeCardView,
       iconList
@@ -90,10 +93,10 @@
 
         // items
         items: [
-          {
-            title: 'Favorites',
-            to: 'favorites'
-          },
+          // {
+          //   title: 'Favorites',
+          //   to: 'favorites'
+          // },
           {
             title: 'Currencies',
             to: 'currencies'
@@ -133,7 +136,7 @@
     margin: 5px 0 0 12px;
   }
 
-  .v-tab {
+  .theme--light.v-tabs > .v-tabs-bar .v-tab {
     font-size: 0.8em;
     font-weight: 400;
     text-transform: none;

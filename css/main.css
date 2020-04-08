@@ -77,6 +77,11 @@ h1, h2, h3, .flags-name {
   font-weight: 600;
 }
 
+
+.card-header {
+  margin: 5px 0 0 0;
+}
+
 .card-text {
   line-height: 1;
   padding: 20px 0 0 20px;
@@ -110,4 +115,47 @@ h1, h2, h3, .flags-name {
 
 .card-section {
   background: #EAECED
+}
+
+.v-slide-group__next, .v-slide-group__prev {
+  flex: 0 1 0 !important;
+  min-width: 0px !important;
+}
+
+.theme--light.v-application {
+  background-color: #f0f0f0 !important;
+}
+
+.app-bar {
+  background-color: #ffffff !important;
+}
+
+.v-toolbar__content, .v-toolbar__extension {
+  padding: 4px 0px 4px 16px !important;
+}
+
+.btn {
+  cursor: pointer;
+  color: #ffffff;
+  height: 50px;
+  padding: 4px 0;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+.default {
+  background-color: #3b4b68;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

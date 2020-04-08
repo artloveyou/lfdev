@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="selector">
     <v-menu offset-y>
 
       <template v-slot:activator="{ on }">
@@ -29,7 +29,7 @@
 
 <script>
   import languages from '~/assets/lang/languages';
-  import Language from '~/components/Language'
+  import Language from '~/components/layouts/Language'
 
   export default {
     components: {
@@ -51,12 +51,16 @@
 </script>
 
 <style scoped>
+  @media (max-width: 770px) {
+    .selector {
+      display: none;
+    }
+  }
   .lang-selector {
     display: flex;
     align-items: center;
     cursor: pointer;
     border-left: 1px solid #e4e4e4;
-    border-right: 1px solid #e4e4e4;
     height: 65px;
   }
 

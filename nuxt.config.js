@@ -1,5 +1,4 @@
 export default {
-  base: 'a',
   mode: 'spa',
   /*
   ** Headers of the page

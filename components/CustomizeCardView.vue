@@ -159,10 +159,6 @@
     height: 20px;
   }
 
-  .card-header {
-    margin: 5px 0 0 0;
-  }
-
   .activate-settings {
     position: relative;
   }
