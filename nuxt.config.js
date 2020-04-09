@@ -1,5 +1,7 @@
 export default {
-  base: '/lfdev/',
+  router: {
+    base: '/nuxtapp/'
+  },
   mode: 'spa',
   /*
   ** Headers of the page
