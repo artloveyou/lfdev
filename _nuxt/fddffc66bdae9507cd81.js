@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[108],{653:function(e,t,n){"use strict";n.r(t);var c={},r=n(3),component=Object(r.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("h1",[this._v("Shares")])}),[],!1,null,"627539c8",null);t.default=component.exports}}]);

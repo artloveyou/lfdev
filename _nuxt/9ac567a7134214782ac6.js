@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[99],{655:function(e,t,n){"use strict";n.r(t);n(43);var r={created:function(){this.$router.replace({path:"/trade/currencies"})}},c=n(3),component=Object(c.a)(r,(function(){var e=this.$createElement;return(this._self._c||e)("div")}),[],!1,null,null,null);t.default=component.exports}}]);

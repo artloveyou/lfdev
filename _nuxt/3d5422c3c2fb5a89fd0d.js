@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[106],{651:function(e,t,n){"use strict";n.r(t);var c={},l=n(3),component=Object(l.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("h1",[this._v("Metals")])}),[],!1,null,"df08ae70",null);t.default=component.exports}}]);
