@@ -80,7 +80,7 @@
     margin: 17px 0 30px 15px;
   }
   .mobile-search-field {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 50px;
     width: 100%;
