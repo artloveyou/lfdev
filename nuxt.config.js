@@ -1,5 +1,5 @@
 export default {
-  base: 'lfdev',
+  base: '/lfdev/',
   mode: 'spa',
   /*
   ** Headers of the page
