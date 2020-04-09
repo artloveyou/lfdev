@@ -1,6 +1,6 @@
 export default {
   router: {
-    base: '/nuxtapp/'
+    base: '/lfdev/'
   },
   mode: 'spa',
   /*
