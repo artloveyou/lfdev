@@ -2,7 +2,7 @@
 <script>
     export default {
       created: function() {
-        this.$router.replace({ path: '/trade' })
+        this.$router.replace({ path: '/trade/currencies' })
       }
     }
 </script>

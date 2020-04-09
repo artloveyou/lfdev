@@ -1,7 +1,6 @@
 <template>
   <div class="text-center">
     <v-dialog
-      style="background-color: rgb(33,1,0);"
       v-model="dialog"
       width="370"
     >

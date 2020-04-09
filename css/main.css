@@ -95,6 +95,12 @@ h1, h2, h3, .flags-name {
   padding: 0 0 35px 20px;
 }
 
+.description {
+  height: 20px;
+  color: #8e9aac;
+  font-size: 0.9em;
+}
+
 .card-green {
   color: #47BF6F;
 }
@@ -143,13 +149,30 @@ h1, h2, h3, .flags-name {
   text-align: center;
   border-radius: 4px;
 }
+.btn-small {
+  height: 40px;
+  width: 120px;
+}
 .default {
-  background-color: #3b4b68;
+  background-color: #3498db;
 }
 
 .btn:hover {
   -webkit-filter: brightness(120%);
   filter: brightness(120%);
+}
+
+.google {
+  background-color: #d95232;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.link {
+  cursor: pointer;
+  color: #3498DB;
 }
 
 .flex-center {

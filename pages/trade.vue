@@ -5,27 +5,80 @@
         <Header class="header" :header="header"/>
       </v-col>
       <v-col class="selects d-flex justify-end">
-        <Select
-          :label="sort.label"
-          :list="sort.list"
-          :listActive="sort.listActive"
-          :width="sort.width"
-        />
-        <Select
-          :label="period.label"
-          :list="period.list"
-          :listActive="period.listActive"
-          :width="period.width"
-        />
-
-        <CustomizeCardView/>
 
         <v-btn
+          class="mobile-settings icon-dots"
+          v-on:click="visible=!visible"
           icon>
-          <iconList
+          <iconDots
             class="icon"
           />
         </v-btn>
+
+        <div
+          class="mobile-settings mobile-settings-bar"
+          v-show="visible"
+        >
+          <div class="mobile-search-close flex-center"
+               v-on:click="visible=!visible">
+            <iconCross
+              class="icon icon-cross"
+            />
+          </div>
+
+          <v-row class="mobile-wrapper">
+            <v-col cols="1">
+              <CustomizeCardPeriod />
+            </v-col>
+            <v-col cols="1">
+              <CustomizeCardSort
+                :label="sort.label"
+                :list="sort.list"
+                :listActive="sort.listActive"
+                :width="sort.width"
+              />
+            </v-col>
+            <v-col cols="1">
+              <CustomizeCardView/>
+            </v-col>
+            <v-col cols="1">
+              <v-btn
+                icon>
+                <iconList
+                  class="icon"
+                />
+              </v-btn>
+            </v-col>
+          </v-row>
+
+        </div>
+
+          <Select
+            class="full-settings"
+            :label="sort.label"
+            :list="sort.list"
+            :listActive="sort.listActive"
+            :width="sort.width"
+          />
+          <Select
+            class="full-settings"
+            :label="period.label"
+            :list="period.list"
+            :listActive="period.listActive"
+            :width="period.width"
+          />
+
+          <CustomizeCardView
+            class="full-settings"/>
+
+          <v-btn
+            class="full-settings"
+            icon>
+            <iconList
+              class="icon"
+            />
+          </v-btn>
+
       </v-col>
     </v-row>
 
@@ -55,22 +108,26 @@
 <script>
   import Header from '~/components/Header.vue'
   import Select from '~/components/Select.vue'
-  import CustomizeCardView from "../components/CustomizeCardView";
+  import CustomizeCardPeriod from '~/components/CustomizeCardPeriod.vue'
+  import CustomizeCardSort from '~/components/CustomizeCardSort.vue'
+  import CustomizeCardView from '~/components/CustomizeCardView.vue'
   import iconList from '~/assets/icons/iconList.vue'
+  import iconDots from '~/assets/icons/iconDots.vue'
+  import iconCross from '~/assets/icons/iconCross.vue'
 
   export default {
-    created: function() {
-      this.$router.replace({ path: '/trade/currencies' })
-    },
     components: {
-      Header, Select, CustomizeCardView,
-      iconList
+      Header, Select,
+      CustomizeCardPeriod, CustomizeCardSort, CustomizeCardView,
+      iconList, iconDots, iconCross
     },
     head: {
       title: 'Trading',
     },
     data() {
       return {
+        visible: false,
+
         // Popup dialog
         customizeCardView: false,
 
@@ -128,6 +185,37 @@
 </script>
 
 <style>
+  .full-settings {
+
+  }
+
+  .mobile-wrapper {
+    padding-left: 20px;
+  }
+  .icon-dots {
+    transform: scale(.7);
+  }
+  .mobile-settings {
+    display: none;
+    position: absolute;
+  }
+  .mobile-settings-bar{
+    border-top: 1px solid #e4e4e4;
+    background-color: #ffffff;
+    width: 100%;
+    height: 59px;
+    top: 0;
+    right: 0;
+  }
+  @media (max-width: 760px) {
+    .mobile-settings {
+      display: block;
+    }
+    .full-settings {
+      display: none;
+    }
+  }
+
   .header-wrapper {
     height: 50px;
   }
