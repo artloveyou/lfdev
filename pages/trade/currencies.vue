@@ -1,22 +1,14 @@
 <template>
-
-  <v-row>
-      <Card
-        v-for="(card, i) in mockup.cards"
-        :key="i"
-        :card="card"
-      />
-  </v-row>
-
+  <Cards :data="mockup" />
 </template>
 
 <script>
+  import Cards from '~/components/Cards.vue'
   import CurrenciesCards from '~/components/mockups/CurrenciesCards'
-  import Card from '~/components/Card.vue'
 
   export default {
     components: {
-      CurrenciesCards, Card
+      Cards, CurrenciesCards
     },
     data() {
       return {

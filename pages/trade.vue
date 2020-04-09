@@ -42,12 +42,23 @@
               <CustomizeCardView/>
             </v-col>
             <v-col cols="1">
+
+
+
               <v-btn
+                @click="$store.commit('changeCardsView')"
                 icon>
                 <iconList
+                  v-if="($store.state.cardsList === false)"
+                  class="icon"
+                />
+                <iconTiles
+                  v-if="($store.state.cardsList === true)"
                   class="icon"
                 />
               </v-btn>
+
+
             </v-col>
           </v-row>
 
@@ -69,12 +80,19 @@
           />
 
           <CustomizeCardView
+            v-if="($store.state.cardsList === false)"
             class="full-settings"/>
 
           <v-btn
+            @click="$store.commit('changeCardsView')"
             class="full-settings"
             icon>
             <iconList
+              v-if="($store.state.cardsList === false)"
+              class="icon"
+            />
+            <iconTiles
+              v-if="($store.state.cardsList === true)"
               class="icon"
             />
           </v-btn>
@@ -112,6 +130,7 @@
   import CustomizeCardSort from '~/components/CustomizeCardSort.vue'
   import CustomizeCardView from '~/components/CustomizeCardView.vue'
   import iconList from '~/assets/icons/iconList.vue'
+  import iconTiles from '~/assets/icons/iconTiles.vue'
   import iconDots from '~/assets/icons/iconDots.vue'
   import iconCross from '~/assets/icons/iconCross.vue'
 
@@ -119,7 +138,7 @@
     components: {
       Header, Select,
       CustomizeCardPeriod, CustomizeCardSort, CustomizeCardView,
-      iconList, iconDots, iconCross
+      iconList, iconTiles, iconDots, iconCross
     },
     head: {
       title: 'Trading',

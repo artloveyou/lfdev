@@ -24,12 +24,12 @@
     computed: {
       loaderFirst() {
         return this.first
-          ? () => import(`~/assets/flags/${this.category}/${this.first}`)
+          ? () => import(`~/assets/flags/${this.first}`)
           : null
       },
       loaderSecond() {
         return this.second
-          ? () => import(`~/assets/flags/${this.category}/${this.second}`)
+          ? () => import(`~/assets/flags/${this.second}`)
           : null
       }
     },

@@ -35,10 +35,14 @@
     </v-content>
 
     <v-footer
+      height="80"
       :fixed="fixed"
       app
+      class="pa-0 ma-0"
     >
-      Footer
+      <v-container class="pa-0 ma-0" fluid>
+        <Footer />
+      </v-container>
     </v-footer>
 
   </v-app>
@@ -50,10 +54,11 @@
   import LanguagesSelector from '~/components/layouts/LanguagesSelector.vue'
   import Authorization from '~/components/layouts/Authorization.vue'
   import Chat from '~/components/layouts/Chat.vue'
+  import Footer from '~/components/layouts/Footer.vue'
 
   export default {
     components: {
-      Search, DrawerDefault, LanguagesSelector, Authorization, Chat
+      Search, DrawerDefault, LanguagesSelector, Authorization, Chat, Footer
     },
     data() {
       return {

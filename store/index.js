@@ -10,14 +10,14 @@ const store = () => new Vuex.Store({
 
     signInDialog: false,
     registrationDialog: false,
-    chatDialog: false
+    chatDialog: false,
+    cardsList: false
 
   },
   mutations: {
-    increment(state) {
-      state.counter++
+    changeCardsView(state) {
+      state.cardsList === true ? state.cardsList = false : state.cardsList =true
     },
-
     closeRegistrationDialog(state) {
       state.registrationDialog = false
     },
